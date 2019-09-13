@@ -1,0 +1,99 @@
+body{
+    display: grid;
+    grid-template-areas: 'nav '
+                         'banner'
+                         'main'
+                         'section'
+                         'footer';
+    grid-template-areas: 99.7vw;
+    margin: 0;
+}
+
+
+header{
+    background-image: url("../imagens/Siri-Cascudo-Lanches.png");
+    background-size: cover;
+    grid-area: banner;
+    height: 250px;
+}
+
+main{
+    grid-area: main;
+}
+main h1, main p{
+    text-align: center;
+}
+
+nav{
+    align-items: center;
+    background-color: #d3bbde;
+    display: flex;
+    grid-area: nav ;
+    height: 45px;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+nav div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+nav div:nth-child(3){
+    display: none;
+}
+nav div span{
+    background-color: black;
+    height: 3px;
+    width: 30px;
+}
+nav img{
+    width: 35px;
+}
+section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area:section;
+}
+.funcionarios{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+
+}
+.funcionarios div img{
+    width: 100px;
+}
+
+@media(min-width:587px){
+    header{
+        background-image: url("../imagens/maior.jpg");
+        height: 400px;;
+    }
+    
+    nav div a {
+        font-size: 16pt;
+        text-decoration: none;
+    }
+    nav div:nth-child(2){
+        display: none;
+    }
+    nav div:nth-child(3){
+        display: block;
+    }
+
+    section .funcionarios{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100vw;
+    }
+}
+
+@media(min-width:710px){
+    header{
+        background-image: url("../imagens/abacaxi.png")
+    }
+}
